@@ -1,0 +1,217 @@
+/*
+Theme Name: Saffron
+Theme URI: https://github.com/Nourhb/saffron-restaurant-theme
+Author: Nour El Houda Bouajila
+Author URI: https://nour-el-houda-bouajila.rf.gd/
+Description: Saffron is an elegant Full Site Editing theme crafted for restaurants, bistros and fine-dining rooms. Deep charcoal and saffron tones, refined serif typography, seasonal menu patterns with dotted price leaders, chef stories, gallery walls and reservation-focused calls to action.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: saffron
+Tags: restaurant, food, menu, reservation, full-site-editing, block-patterns, serif, elegant
+*/
+
+/* ============================================================
+   Saffron — front-end polish
+   ============================================================ */
+
+:root {
+	--saffron-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---- Reveal on scroll ------------------------------------ */
+.saffron-reveal {
+	opacity: 0;
+	transform: translateY(28px);
+	transition: opacity 0.9s var(--saffron-ease), transform 0.9s var(--saffron-ease);
+	transition-delay: var(--saffron-delay, 0s);
+}
+
+.saffron-reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ---- Menu item hover ------------------------------------- */
+.saffron-menu-item {
+	transition: transform 0.35s var(--saffron-ease);
+}
+
+.saffron-menu-item:hover {
+	transform: translateX(8px);
+}
+
+.saffron-menu-item .saffron-dish-name {
+	transition: color 0.3s ease;
+}
+
+.saffron-menu-item:hover .saffron-dish-name {
+	color: var(--wp--preset--color--saffron);
+}
+
+/* ---- Image zoom on hover ---------------------------------- */
+.saffron-zoom {
+	overflow: hidden;
+}
+
+.saffron-zoom img {
+	transition: transform 0.8s var(--saffron-ease);
+}
+
+.saffron-zoom:hover img {
+	transform: scale(1.06);
+}
+
+/* ---- Button sheen ----------------------------------------- */
+.wp-block-button.is-style-saffron-sheen .wp-block-button__link {
+	position: relative;
+	overflow: hidden;
+}
+
+.wp-block-button.is-style-saffron-sheen .wp-block-button__link::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -80%;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+	transform: skewX(-20deg);
+	transition: left 0.6s ease;
+}
+
+.wp-block-button.is-style-saffron-sheen .wp-block-button__link:hover::after {
+	left: 130%;
+}
+
+/* ---- Thin gold rule ---------------------------------------- */
+.saffron-rule {
+	width: 64px;
+	height: 2px;
+	background: var(--wp--preset--color--saffron);
+	margin: 1.5rem auto;
+}
+
+/* ---- Back to top ------------------------------------------- */
+.saffron-back-top {
+	position: fixed;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--charcoal);
+	color: var(--wp--preset--color--cream);
+	border: 1px solid var(--wp--preset--color--saffron);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+	transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+	z-index: 50;
+}
+
+.saffron-back-top.is-visible {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.saffron-back-top:hover {
+	background: var(--wp--preset--color--saffron);
+	color: var(--wp--preset--color--charcoal);
+}
+
+/* ---- Dotted price leader ----------------------------------- */
+.saffron-price-row {
+	display: flex;
+	align-items: baseline;
+	gap: 0.75rem;
+}
+
+.saffron-price-row .saffron-dots {
+	flex: 1;
+	border-bottom: 2px dotted rgba(232, 160, 32, 0.5);
+	transform: translateY(-6px);
+}
+
+/* ---- Marquee strip ------------------------------------------ */
+.saffron-marquee {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.saffron-marquee-track {
+	display: inline-flex;
+	gap: 3rem;
+	padding-right: 3rem;
+	animation: saffron-marquee 28s linear infinite;
+}
+
+@keyframes saffron-marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+/* ---- Skip link & focus -------------------------------------- */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	background: var(--wp--preset--color--saffron);
+	color: #1c1917;
+	padding: 0.75rem 1.25rem;
+	z-index: 100;
+	font-weight: 600;
+}
+
+.skip-link:focus {
+	left: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+.wp-block-button__link:focus-visible {
+	outline: 2px solid var(--wp--preset--color--saffron);
+	outline-offset: 3px;
+}
+
+/* ---- Reduced motion ------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+	.saffron-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.saffron-marquee-track {
+		animation: none;
+	}
+
+	.saffron-zoom img,
+	.saffron-menu-item {
+		transition: none;
+	}
+
+	.saffron-menu-item:hover {
+		transform: none;
+	}
+}
+
+/* ---- Print ---------------------------------------------------- */
+@media print {
+	.saffron-back-top,
+	.site-header .wp-block-buttons {
+		display: none;
+	}
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Brunch",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "color": "#fffdf6",
+          "name": "Morning Cream",
+          "slug": "cream"
+        },
+        {
+          "color": "#e8a020",
+          "name": "Saffron",
+          "slug": "saffron"
+        },
+        {
+          "color": "#c98a1b",
+          "name": "Burnished Gold",
+          "slug": "gold"
+        },
+        {
+          "color": "#5c554e",
+          "name": "Warm Stone",
+          "slug": "stone"
+        },
+        {
+          "color": "#2a2320",
+          "name": "Espresso",
+          "slug": "espresso"
+        },
+        {
+          "color": "#1c1917",
+          "name": "Charcoal",
+          "slug": "charcoal"
+        },
+        {
+          "color": "#f6e7c8",
+          "name": "Honey",
+          "slug": "parchment"
+        },
+        {
+          "color": "#ffffff",
+          "name": "Ivory",
+          "slug": "ivory"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#fffdf6",
+      "text": "#2a2320"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "#e8a020",
+          "text": "#1c1917"
+        }
+      },
+      "h1": {
+        "color": {
+          "text": "#2a2320"
+        }
+      },
+      "h2": {
+        "color": {
+          "text": "#2a2320"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#c98a1b"
+        },
+        ":hover": {
+          "color": {
+            "text": "#e8a020"
+          }
+        }
+      }
+    }
+  }
+}
