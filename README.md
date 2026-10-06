@@ -56,6 +56,16 @@ No plugins required. Google Fonts (Playfair Display + Jost) load automatically; 
 ### 1.0.0
 - Initial release: 8 templates, 2 template parts, 10 block patterns, Brunch style variation, theme.js interactions, full a11y pass.
 
+## Design Previews
+![saffron-main](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-main.png)
+![saffron-menu](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-menu.png)
+![saffron-mobile](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-mobile.png)
+![saffron-brunch](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-brunch.png)
+![saffron-chef](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-chef.png)
+![saffron-gallery](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-gallery.png)
+![saffron-reservation](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-reservation-scaled.png)
+![saffron-testimonials](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/saffron-testimonials.png)
+
 ## License
 
 GNU General Public License v2 or later — see `LICENSE`.
