@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+	<!-- wp:post-featured-image {"align":"wide"} /-->
+	<!-- wp:post-title {"level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--display)"}}} /-->
+	<!-- wp:group {"layout":{"type":"flex"},"style":{"typography":{"fontSize":"0.85rem","letterSpacing":"0.08em","textTransform":"uppercase"},"color":{"text":"#c98a1b"},"spacing":{"blockGap":"1rem"}}} -->
+	<div class="wp-block-group has-gold-color has-text-color" style="font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase">
+		<!-- wp:post-date /-->
+		<!-- wp:post-author-name /-->
+	</div>
+	<!-- /wp:group -->
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+	<!-- wp:separator {"className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+	<!-- /wp:separator -->
+	<!-- wp:comments -->
+	<div class="wp-block-comments">
+		<!-- wp:comments-title /-->
+		<!-- wp:comment-template -->
+		<!-- wp:columns -->
+		<div class="wp-block-columns">
+			<!-- wp:column {"width":"48px"} -->
+			<div class="wp-block-column" style="flex-basis:48px"><!-- wp:avatar {"size":48} /--></div>
+			<!-- /wp:column -->
+			<!-- wp:column -->
+			<div class="wp-block-column">
+				<!-- wp:comment-author-name /-->
+				<!-- wp:comment-date /-->
+				<!-- wp:comment-content /-->
+				<!-- wp:comment-reply-link /-->
+			</div>
+			<!-- /wp:column -->
+		</div>
+		<!-- /wp:columns -->
+		<!-- /wp:comment-template -->
+		<!-- wp:comments-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+		<!-- wp:comments-pagination-previous /-->
+		<!-- wp:comments-pagination-next /-->
+		<!-- /wp:comments-pagination -->
+		<!-- wp:post-comments-form /-->
+	</div>
+	<!-- /wp:comments -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
